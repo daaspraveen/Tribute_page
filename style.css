@@ -1,14 +1,241 @@
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
-body{background-color: antiquewhite;width:100%;}
-.container{background-color: rgba(205, 187, 165, 0.701); padding:10px;border:2px black solid;margin: 10px;}
-header{background-color: white;border-radius: 5px; text-align:center;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 3vh;padding-top: 2px;}
-.headimg>img{display: block; max-width:50vw;height:auto;margin-left: auto;margin-right: auto;border-radius: 30px;}
-figcaption{text-align: center;}
-p{color: rgb(3, 3, 3);font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-indent: 5%;text-align: justify;}
-.shadow-block{ display:flex;width:100%;height: 100%;justify-content: center;align-items: center;}
-.shadow-p{max-width: 100%;margin-right: 10px;}
-.shadow-img>img{max-width: 100%;max-height:100%;border-radius: 20px;}
-footer{position: relative;margin: auto;}
-footer img{margin-left: 20%; width: 50vw;height: auto;border-radius: 10px;}
-footer h2{margin-left: 15%;position:absolute; color:salmon;top:15%;left:10%;font-size:5vw;-webkit-text-stroke: .5px rgb(255, 255, 255);}
-    
+body {
+    background-color: rgb(57, 89, 113);
+    outline: 0;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    line-height: 2rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    text-shadow: 2px 5px 15px black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #EC8F5E;
+    /* #F47645 #F9AD8D #FDE3D9;*/
+}
+
+h1 {
+    padding: 0.3rem 0;
+    display: inline-block;
+}
+
+.figure-box {
+    width: auto;
+    margin: auto;
+    flex-direction: column;
+}
+
+.figcaption {
+    text-align: center;
+    font-weight: lighter;
+    width: auto;
+}
+
+/* main image responsive width*/
+.main-image {
+    max-width: 60vw;
+    min-width: 30vw;
+}
+
+.container {
+    max-width: 1500px;
+    ;
+    min-width: 70%;
+    width: 90vw;
+    margin: auto;
+    padding-bottom: 20px;
+    padding-top: 5px;
+    flex-direction: column;
+    column-gap: 2vh;
+}
+
+.para-box {
+    flex-direction: column;
+    padding: 1vw 0 3vw;
+}
+
+.para-img-box {
+    height: min-content;
+    padding-block: 5%;
+
+    >img {
+        border-radius: 15px;
+        box-shadow: 15px 10px 0px black;
+    }
+}
+
+.intro-para::first-letter {
+    font-size: 3vw;
+}
+
+.indent {
+    text-indent: 5%;
+}
+
+.left {
+    flex-direction: row-reverse;
+}
+
+.right {
+    flex-direction: row;
+}
+
+p,
+caption,
+i {
+    text-align: justify;
+    font-size: 1.5vw;
+}
+
+.last-box {
+    position: relative;
+    width: 100%;
+}
+
+.shivaji-last-img {
+    width: 100%;
+}
+
+.slogan {
+    width: 80%;
+    position: absolute;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-shadow: 2px 2px 20px black;
+    font-weight: bolder;
+}
+
+.jai {
+    color: orange;
+    font-size: 10vw;
+    display: inline-block;
+}
+
+.bs {
+    font-size: 4vw;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1vw;
+}
+
+span {
+    margin-block: 0.5vw;
+}
+
+footer {
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    background-color: #9FBB73;
+}
+
+.copyrights-para {
+    margin: 0;
+    padding: 5px 2px;
+    color: black;
+    text-transform: capitalize;
+}
+
+
+/* desktop laptop view*/
+@media screen and (orientation : landscape) {
+
+    body>* {
+        transition: 0.5s ease 0s;
+    }
+
+    header,
+    p,
+    footer {
+        line-height: 2vw;
+        font-size: 1.5vw;
+    }
+
+    .container {
+        width: 90vw;
+    }
+
+    .para-box .intro-para {
+        width: 100%;
+    }
+
+    .para-img-box {
+        >p {
+            width: 50%;
+        }
+
+        ;
+
+        >img {
+            max-width: 300px;
+            width: 40%;
+            min-width: 150px;
+        }
+    }
+
+    .last-box img {
+        border-radius: 20px;
+    }
+
+
+}
+
+/* mobile tab view*/
+@media screen and (orientation : portrait) {
+    html {
+        font-size: 32px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .figure-box {
+        width: auto;
+    }
+
+    .main-image {
+        width: 90vw;
+    }
+
+    .para-box {
+        padding: 0;
+    }
+
+    .para-img-box {
+        flex-direction: column-reverse;
+        gap: 5px;
+        padding: 0px;
+        width: 90%;
+
+        >img {
+            max-width: 60vw;
+            min-width: 200px;
+            width: auto;
+        }
+    }
+}
