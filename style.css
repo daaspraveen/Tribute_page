@@ -206,9 +206,10 @@ footer {
 
 /* mobile tab view*/
 @media screen and (orientation : portrait) {
-    html {
-        font-size: 32px;
+    html *{
+        font-size: 1rem;
     }
+    h1{font-size: 1.8rem;}
 
     .container {
         width: 100%;
@@ -216,6 +217,7 @@ footer {
 
     .figure-box {
         width: auto;
+        display: flex;justify-content: center;align-items: center;
     }
 
     .main-image {
